@@ -1,0 +1,4 @@
+-- inicio del mensaje --
+Responsive hecho para iphone 14
+Lo mismo que el titulo del archivo
+-- fin del mensaje--

@@ -1,0 +1,986 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+
+/*/https://www.w3schools.com/jsref/event_onmouseover.asp*/
+/*https://developer.mozilla.org/es/docs/Web/API/setTimeout*/
+
+
+/*Header*/
+
+    header{
+        width: 100%;
+        position: fixed;
+        top:0;
+        z-index: 9;
+    }
+
+    #cabecera{
+        background-color: #70A89B;
+        width: 100%;
+    }
+
+
+/* caracteristicas del titulo y separador*/
+    #titulo{
+        max-width: 1500px;
+        width: 100%;
+        margin: 0px auto;
+        padding-top: 20px;
+        padding-left: 50px;
+    }
+
+    #imagen_logo{
+        max-width: 753px;
+        width: 100%;
+        transition: max-width 0.8s ease-out;
+    }
+
+    #separador{
+        background-color:#F1FBF3 ;
+        width: 100%;
+        height: 1px;
+    }
+
+
+/*titulo dos y contactos posicion*/
+    #sub_divisor{
+        display: flex;
+        max-width: 1500px;
+        margin: auto;
+        width: 100%;
+    }
+
+    #titulo2{
+        flex: 2;
+        color: #F1FBF3;
+        padding-left: 50px
+    }
+
+    #titulo2 h2{
+        font-size: 24px;
+        transition: font-size 0.8s ease-out;
+    }
+
+    #nav_contactos{
+        flex: 1;
+        padding-right: 40px;
+    }
+
+/* caracteristicas de contactos */
+    .img_contactos{
+        width: 20px;
+    }
+
+    /*imagen logo mas grande*/
+    .sobre_pot{
+        scale: 1.1;
+    }
+
+    #nav_contactos ul {
+        position: relative;
+        right: 10px;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        gap:5px;
+        margin-top: 10px;
+        justify-content: end;
+        /* overflow: hidden; */
+        transition: right 2s ease-out;
+    }
+
+    #nav_contactos ul li:hover img{
+        transform: scale(1.1);
+    }
+
+/* menu navegacion */
+.nav-list{
+    list-style-type: none;
+    display: none;
+    height: 38px;
+    /* gap: 1rem; */
+    text-align: right;
+    background-color: #FDF7EB;
+    padding-left: 40px;
+    transition: all 0.8s ease-in-out;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    /* color:black; */
+    color:#70A89B;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.5s ease-out;
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #1C5465;
+}
+
+.nav-list li{
+    margin: 5px;
+    padding: 5px;
+}
+
+/*main general*/
+
+    #main{
+        max-width: 1400px;
+        margin: auto;
+        display: flex;
+        color: #133945;
+        margin-top: 200px;
+    }
+
+/*contenedor aside flores*/
+
+    #aside{
+        padding-top: 15px;
+        max-width: 200px;
+        height: 1817px;
+        flex: 1;
+        border-radius: 10px;
+        background:#E7F5DC;
+        padding: 15px;
+        overflow: hidden;
+        transition: all 1s ease-out;
+    }
+
+    /*posicionamiento contenedor*/
+
+    #Aside_nav{
+        text-align: center;
+        padding: 70px 10px;
+    }
+
+    #asi_flores ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap:10px;
+        justify-content: center;
+        animation: cambioBlock 1s ease-in-out;
+    }
+
+    #Florero_decor{
+        max-width: 130px;
+        margin: 20px 0px;
+    }
+
+    #p_aside{
+        margin: 20px 0px;
+    }
+
+    /* menu de flores*/
+
+    .nav_flores{
+        max-width: 120px;
+        box-shadow:#1C5465 1px 1px 5px;
+        border-radius: 5%;
+        scale: 1;
+        margin: 2px;
+        margin-bottom: 5px;
+        transition: all 0.5s linear;
+    }
+
+    #asi_flores ul li:hover img {
+        scale: 1.08;
+        background: rgb(28, 84, 101, 0.4) ;
+    }
+
+    .f1{
+        background: #FFC6B8 ;
+    }
+
+    .f2{
+        background: #96D8EE ;
+    }
+
+    .f3{
+        background: #D8F2F3;
+    }
+
+    .f4{
+        background: #A9E0C0 ;
+    }
+
+    .oculFlor3{
+        display: none;
+    }
+
+
+/*contenedor seccion central*/
+    #section{
+        flex: 3;
+        margin-left: 50px;
+    }
+
+    /*Planta y frase "Inspiradora"*/
+
+        #Section_Pr{
+            display: flex;
+            align-items: center;
+            text-align: justify;
+            background-color: #ACDFBE;
+            border-radius: 20px;
+            margin-right: 20px;
+            padding: 10px;
+        }
+
+        #img_presentacion{
+            flex: 1;
+            max-width: 180px;
+            margin: -20px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #Section_Pr p{
+            flex:2;
+            padding-right: 20px;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+
+    /*titulo, imagenes y separador*/
+
+        .SectionH2{
+            margin: 20px 0px;
+            color: #1C5465;
+            font-size: xx-large;
+        }
+
+        .Img_reportaje{
+            min-width: 400px;
+            width: 100%;
+            border: #133945 2px solid;
+            overflow: hidden;
+            box-shadow:#1C5465 1px 1px 5px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .Img_reportaje:hover {
+            transform: scale(1.05);
+        }
+
+        .separador2{
+            background-color:#70A89B;
+            width: 100%;
+            height: 1px;
+            margin: 15px 0px;
+        }
+
+    /*articulos*/
+
+        .Cont_blogs{
+            display: flex;
+            align-items: center;
+            padding: 0px 30px;
+        }
+
+        .Cont_blogs a:hover {
+            text-decoration: underline;
+            color: rgb(28, 84, 101,0.8);
+        }
+
+        /*Textos*/
+
+        .Cont_blogs p{
+            text-align: justify;
+            margin-top: 0px;
+            font-size: 110%;
+            transition: all 0.8s ease-out;
+        }
+
+        .Cont_blogs a h3{
+            font-size: x-large;
+            transition: all 0.8s ease-out;
+        }
+
+        .Cont_blogs a{
+            color: #1C5465;
+            text-decoration: none;
+            font-size: large;
+            text-transform: capitalize;
+            flex: 1;
+        }
+
+        .titulosNot{
+            margin: 0px 30px;
+        }
+
+        /*noticias pares*/
+        .inverse{
+            flex-direction: row-reverse;
+        }
+
+/*footer*/
+#footer{
+    margin-top: 10px;
+    background-color: #709898;
+}
+
+#foot{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1500px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #F1FBF3;
+}
+
+#Imagen_logofooter{
+    max-width: 90px;
+    margin-right: 5px;
+    flex: 1;
+}
+
+#foot h4{
+    flex: 4 2 500px;
+}
+
+#nav_contactos2{
+    display: none;
+}
+
+#nav_contactos2 ul li:hover img{
+    transform: scale(1.1);
+}
+
+#nav_contactos2 ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    gap:5px;
+    justify-content: center;
+    transition: right 2s ease-out;
+}
+
+#nav_contactos #inicio a{
+    color: white;
+    text-decoration: none;
+}
+
+/*Blog sobre nosotros*/
+    .sectBlog{
+        margin-right: 20px;
+        margin-left: 20px;
+        color: #133945;
+        background-color:rgb(169, 224, 192, 0.4);
+        border-radius: 5%;
+        padding: 10px;
+    }
+
+    .cuerpoSecc{
+        width: 100%;
+        max-width: 700px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px
+    }
+
+    .cuerpoSecc h2, .cuerpoSecc p, .cuerpoSecc h3{
+        margin-top: 20px;
+    }
+
+
+    #Img_SobreNosotros{
+        width: 100%;
+        max-width: 350px;
+        border-radius: 50%;
+        border: #c0d0b4 5px solid;
+        box-shadow:#1C5465 1px 1px 5px;
+        animation: rotacion 10s linear infinite;
+    } 
+
+    @keyframes rotacion {
+        0% { border-color: darkred; 
+            box-shadow:darkred 5px 5px 5px;}
+        14% { border-color: darkorange; 
+            box-shadow:darkorange 5px 0px 10px;}
+        28% { border-color: darkgoldenrod; 
+            box-shadow:darkorange 0px 0px 5px;}
+        42% { border-color: darkgreen; 
+            box-shadow:darkgreen -5px 0px 10px;}
+        56% { border-color: darkblue;
+            box-shadow:darkblue -5px -5px 5px;}
+        70% { border-color: purple; 
+            box-shadow:darkblue 0px -5px 10px;}
+        84% { border-color: violet; 
+            box-shadow:violet 0px 0px 5px;}
+        100% { border-color: darkcyan; 
+            box-shadow:darkcyan 0px 5px 10px;}
+    }
+
+    
+
+/*Noticias*/
+
+.sectBlog2{
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #133945;
+    padding: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.SecNoticia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Img_noticias{
+    width: 100%;
+    max-width: 350px;
+    border: #c0d0b4 5px solid;
+    box-shadow:#1C5465 1px 1px 5px;
+    margin: 20px;
+}
+
+.SecNoticia h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.SecNoticia p{
+    margin-top: 20px;
+}
+
+#masNoticias{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.otrasNoticias{
+    padding: 15px;
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.otrasNoticias a{
+    color:#133945;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: all 1s ease-in-out;
+}
+
+.Img_noticias2{
+    width: 100%;
+    max-width: 250px;
+    border: #c0d0b4 5px solid;
+    box-shadow:#1C5465 1px 1px 5px;
+    margin: 20px;
+    transition: all 1s ease-in-out;
+}
+
+.Img_noticias2:hover{
+    scale:1.1;
+}
+
+.otrasNoticias a:hover{
+    text-decoration: underline;
+    color: rgb(28, 84, 101,0.8);
+}
+
+
+/*Web de las flores*/
+#Bloque_Contenido{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+#Bloque_Contenido h1 {
+    font-size: 40px;  
+    animation: cambiaColor 30s infinite;
+}
+
+
+
+/* FORMULARIO */
+
+#opinion_form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: orange;
+    background-color: #FDF7EB;
+    border-radius: 10px;
+    box-shadow:#1C5465 1px 1px 5px;
+    z-index: 99;
+}
+
+/*x*/
+#cerrar_formulario {
+    position: absolute;
+    padding: 5px;
+    color: #1C5465;
+    font-weight: bolder;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#cerrar_formulario:hover {
+    color: #70A89B;
+}
+
+#opinion_form h2 {
+    margin-bottom: 20px;
+    color: #1C5465;
+}
+
+#opinion_form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #70A89B;
+}
+
+#opinion_form textarea, #opinion_form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #70A89B;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#opinion_form textarea {
+    height: 100px;
+}
+
+#opinion_form button {
+    padding: 10px 20px;
+    background-color: #70A89B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#opinion_form button:hover {
+    background-color: #1C5465;
+}
+
+#Oscurecido {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 44;
+}
+
+
+@keyframes cambiaColor {
+    0% {}
+    20% { color: pink; } 
+    40% { color: darkred; }
+    60% { color: darkcyan; }
+    80% { color: darkgoldenrod; }
+    100% { color: white } 
+}
+
+#Bloque_secun{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#cont_img .Img_noticias:hover {
+    scale: 1.05;
+    transition: all 0.5s linear;
+}
+
+#Bloque_secun, #cont_tex{
+    flex: 1 1 300px;
+}
+
+#milista_flores{
+    padding-left: 30px;
+}
+
+.iconos_cuidados{
+    max-width: 170px;
+}
+
+#curiosidades{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#curiosidadesblo{
+    padding-left: 20px;
+}
+
+#milista_flores li{
+    margin: 5px;
+}
+
+
+@media (max-width:1300px) {
+     /*Imagen reportaje*/
+
+     .Img_reportaje{
+        min-width: 350px;
+    }
+
+    .oculFlor2{
+        display: none;
+    }
+
+    #aside{
+        height: 1670px;
+    }
+}
+
+@media (max-width:1200px) {
+    @keyframes cambioBlock {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+    .oculFlor2, .oculFlor3{
+        display: block;
+    }
+
+    #asi_flores ul{
+        display: block;
+    }
+
+    #Florero_decor {
+        max-width: 100px;
+    }
+
+
+    #aside{
+        max-width: 150px;
+        height: 1640px;
+    }
+
+    .nav_flores{
+        max-width: 100px;
+    }
+
+     /*Textos reportaje*/
+
+     .Cont_blogs p{
+        font-size: 100%;
+    }
+
+}
+
+
+@media(max-width: 1020px){
+
+    .oculFlor2, .oculFlor3, .oculFlor1{
+        display: none;
+    }
+
+    /*Titulo imagen*/
+
+        #imagen_logo{
+            max-width: 600px;
+        }
+
+    /*titulo dos y contactos posicion*/
+
+        #titulo2 h2{
+            font-size: 20px;
+        }
+
+        #nav_contactos ul{
+            right: -500px;
+        }
+
+    /*menu de navegacion*/
+
+    .nav-list{
+        display: flex;
+    }
+
+    /*aside flores*/
+
+        #aside{
+            max-width: 0%;
+            position: fixed;
+            padding: 8px;
+            height: 350px;
+            background-color:  rgb(28, 84, 101);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0px;
+            z-index: 3;
+            transform: translate(0,0);
+        }
+
+        #asi_flores ul{
+            display: none;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #aside:hover{
+            max-width: 160px;
+            margin-top:0;
+            height: 350px;
+            background:#E7F5DC;
+            transform: translate(0,0);
+        }
+
+        .barra_vertical{
+            position: relative;
+            margin-top: 140px;
+            height: 50px;
+            width: 4px;
+            background-color: white;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #aside:hover .barra_vertical{
+            display: none;
+        }
+
+        #aside:hover #asi_flores ul{
+            display: flex;
+        }
+
+        #asi_flores ul li{
+            flex: 1;
+        }
+
+        #Florero_decor,#h2_aside, #p_aside{
+            display: none;
+            /* max-width: 100px; */
+        }
+
+        #aside:hover #h2_aside{
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        #Aside_nav {
+            padding: 5px;
+        }
+
+
+        .nav_flores{
+            max-width: 50px;
+        }
+
+        #Aside_nav{
+            padding-left: 20px;
+        }
+
+        #Aside_nav h2 {
+            font-size: 15px;
+        }
+
+        #Aside_nav p {
+            font-size: 13px;
+        }
+
+    /*Reportje*/
+
+
+        /*Imagen reportaje*/
+
+        .Img_reportaje{
+            min-width: 300px;
+        }
+
+        /*Textos reportaje*/
+
+        .Cont_blogs p{
+            font-size: 90%;
+        }
+
+        .Cont_blogs a h3{
+            font-size: large;
+        }
+
+        #foot h4{
+            font-size: 90%;
+        }
+
+        #Imagen_logofooter{
+            max-width: 70px;
+        }
+
+        #nav_contactos2{
+            display: block;
+        }
+}
+
+@media screen and (max-width:700px) {
+
+     /*Titulo imagen y titulo h2*/
+
+     #imagen_logo{
+        max-width: 480px;
+    }
+
+    #titulo2 h2{
+        padding-top: 5px;
+        font-size: 16px;
+    }
+
+    /*presentacion imagen y texto*/
+
+    #Section_Pr p{
+        font-size: 16px;
+    }
+
+    #img_presentacion{
+        max-width: 150px;
+    }
+
+    /*seccion noticias*/
+
+    .SectionH2{
+        font-size: x-large;
+    }
+
+    .Cont_blogs{
+        flex-direction: column-reverse;
+    }
+
+    .Img_reportaje{
+        max-width: 400px;
+    }
+
+    /*Menu principal*/
+
+        #posmenu{
+            max-width: 1024px;
+            display: flex;
+            justify-content: end;
+        }
+
+    /*Menu hambur*/
+
+        .nav-menu{
+            max-width: 100px;
+            margin-top: -31px;
+            margin-right: 3px;
+        }
+
+        #men_hamburgesa{
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            height: 30px;
+            border:0;
+            background: transparent;
+            gap: 10px;
+            cursor: pointer;
+
+        }
+
+        #men_hamburgesa > div{
+            background:#E7F5DC;
+            height: 2px;
+            width: 100%;
+            transition: all 300ms;
+            transform-origin: 0 100%;
+        }
+
+        /*Menu desplegable*/
+        .nav-list{
+            position: absolute;
+            top:103px;
+            right: 0px;
+            max-width: 170px;
+            z-index: 1;
+            height: 0px;
+            overflow: hidden;
+            transition: height 0.2s linear;
+            flex-direction: column;
+            border-bottom-left-radius: 10px;
+        }
+
+        .nav-list li a{
+            /*color:rgb(231, 245, 220);
+            color:rgb(112, 168, 155);*/
+            font-size: 90%;
+            transition: color 0.5s linear;
+        }
+
+        #main{
+            margin-top: 130px;
+        }
+
+        #foot h4{
+            font-size: 75%;
+        }
+
+        /*ocultar menu inicio*/
+        #OcultoInicio{
+            display: none;
+        }
+
+}
+
+@media (max-width: 500px) {
+    /*Logo moviles*/
+    #imagen_logo{
+        max-width: 350px;
+    }
+
+    .nav-list{
+        top:98px;
+        right: 0px;
+    }
+
+    #Imagen_logofooter{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 440px) {
+    /*Logo moviles*/
+    .nav-list{
+        top:118px;
+        right: 0px;
+    }
+    
+    .nav-listFlores{
+        right: 5px;
+    }
+
+    #Bloque_Contenido{
+        padding-right: 15px;
+    }
+
+    .moverDer{
+        margin-right: 12px;
+    }
+}
